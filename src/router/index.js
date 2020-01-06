@@ -18,9 +18,11 @@ export default new Router({
     }, {
       path: '/zixun',
       component: zixun
-    },{
+    }, {
       path: '/home',
       component: home
     }
   ]
 })
+
+

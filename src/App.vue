@@ -22,4 +22,8 @@ export default {
 #app {
     background-color: white;
 }
+  body{
+    padding: 0;
+    margin: 0;
+  }
 </style>

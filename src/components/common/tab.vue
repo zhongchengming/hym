@@ -1,7 +1,7 @@
 <template>
   <div class="tab">
     <div style="width: 100%;height: 1px;background-color: rgba(181,181,181,0.8)"></div>
-    <router-link tag="div" class="tab-item" to="/home">
+    <router-link tag="div" class="tab-item"  to="/home">
       <div class="tab-link">首页</div>
     </router-link>
 
