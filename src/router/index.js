@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import home from '@/components/home/home'
 import person from '@/components/person/person'
 import zixun from '@/components/zixun/zixun'
+import messageDetail from '@/components/zixun/messageDetail'
 Vue.use(Router)
 
 export default new Router({
@@ -17,12 +18,16 @@ export default new Router({
       component: person
     }, {
       path: '/zixun',
-      component: zixun
+      component: zixun,
+      children: [
+        {
+          path: 'detail',
+          component: messageDetail
+        }
+      ]
     }, {
       path: '/home',
       component: home
     }
   ]
 })
-
-
