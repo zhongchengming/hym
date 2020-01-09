@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="person-box">
     <div class="mine-header">
       <div class="avatar-box">
         <img class="avatar"
@@ -8,9 +8,39 @@
       </div>
       <div class="user-name">傻阿明</div>
       <div class="user-id">ID: 47798643</div>
+
+      <div class="info-box">
+        <div class="item">
+          <span class="item-number">2020</span>
+          <span class="item-info">金币</span>
+        </div>
+
+        <div class="divider-line"/>
+
+        <div class="item">
+          <span class="item-number">19.9</span>
+          <span class="item-info">余额（元）</span>
+        </div>
+
+        <div class="divider-line"/>
+
+        <div class="item">
+          <span class="item-number">799</span>
+          <span class="item-info">总收入（元）</span>
+        </div>
+      </div>
     </div>
 
     <div class="control-nav"></div>
+
+    <div class="item-function">
+      <img class="item-function-icon" src="../../assets/ic_question.png" alt="...">
+      <span class="item-function-text">问题帮助</span>
+      <img class="more" src="../../assets/ic_more_back.png" alt="...">
+    </div>
+
+    <div class="line"/>
+
   </div>
 </template>
 
@@ -21,6 +51,10 @@
 </script>
 
 <style scoped>
+  .person-box {
+    background-color: #ECECEC;
+  }
+
   .mine-header {
     position: relative;
     height: 180px;
@@ -61,5 +95,84 @@
     font-size: 14px;
     top: 62px;
     left: 105px;
+  }
+
+  .info-box {
+    width: 100%;
+    position: absolute;
+    top: 110px;
+    display: flex;
+    text-align: center;
+  }
+
+  .divider-line {
+    position: relative;
+    top: 10px;
+    height: 32px;
+    width: 1px;
+    background-color: white;
+  }
+
+  .item {
+    flex-grow: 1;
+  }
+
+  .item-number {
+    margin: 0 auto;
+    display: block;
+    align-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .item-info {
+    margin: 0 auto;
+    display: block;
+    align-content: center;
+    font-size: 14px;
+    color: white;
+  }
+
+  .item-function {
+    margin-top: 15px;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .item-function-icon {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 15px;
+    top: 7px;
+  }
+
+  .item-function-text {
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    left: 44px;
+    top: 10px;
+  }
+
+  .more {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: #F1F1F1;
   }
 </style>

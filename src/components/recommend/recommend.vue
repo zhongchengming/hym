@@ -25,15 +25,15 @@
 </template>
 
 <script>
-import {getMessageList} from '../../js/zixun'
+import {getMessageList} from '../../js/recommend'
 import Nav from '../common/nav'
 
 export default {
-  name: 'zixun',
+  name: 'recommend',
   data () {
     return {
       messageList: [],
-      isShowReturn: false
+      isShowReturn: false,
     }
   },
   created () { //  初始化的时候执行
@@ -65,7 +65,7 @@ export default {
     },
     pushDetail () {
       this.$router.push({
-        path: `/zixun/detail/`
+        path: `/recommend/detail/`
       })
     }
   },

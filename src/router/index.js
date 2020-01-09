@@ -1,33 +1,35 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
-import home from '@/components/home/home'
+import shop from '@/components/shop/shop'
 import person from '@/components/person/person'
-import zixun from '@/components/zixun/zixun'
-import messageDetail from '@/components/zixun/messageDetail'
+import recommend from '@/components/recommend/recommend'
+import messageDetail from '@/components/recommend/messageDetail'
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      component: home
+      component: recommend
     },
     {
-      path: '/person',
-      component: person
-    }, {
-      path: '/zixun',
-      component: zixun,
+      path: '/recommend',
+      component: recommend,
       children: [
         {
           path: 'detail',
           component: messageDetail
         }
       ]
-    }, {
-      path: '/home',
-      component: home
+    },
+    {
+      path: '/person',
+      component: person
+    },
+    {
+      path: '/shop',
+      component: shop
     }
   ]
 })
