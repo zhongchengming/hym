@@ -1,10 +1,9 @@
 <template>
   <transition name="slide">
     <div style="width: 100%;height: 400px;position: fixed;z-index: 100;background-color: white">
-      <Nav title="详情">
-
+      <Nav title="详情" :show-return="true">
+         我是详情我是详情
       </Nav>
-      <p>asa</p>
     </div>
   </transition>
 </template>

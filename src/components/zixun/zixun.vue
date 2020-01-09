@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="width: 100%;position: fixed;">
-      <Nav title="资讯"/>
+      <Nav title="资讯" :show-return="false"/>
       <div class="article-box" v-for="item in messageList" @click="pushDetail">
         <div class="article-item">
           <div>
@@ -32,11 +32,15 @@ export default {
   name: 'zixun',
   data () {
     return {
-      messageList: []
+      messageList: [],
+      isShowReturn: false
     }
   },
   created () { //  初始化的时候执行
     this.getMessageList()
+  },
+  mounted: function () {
+
   },
   methods: {
     getMessageList () {
