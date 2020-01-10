@@ -8,30 +8,30 @@
 </template>
 
 <script>
-  export default {
-    name: 'nav',
-    data() { // es6 写法
-      return {
-        bg: require('../../assets/whiteRetutnUp@3x.png'),
-        scrollY: 0,
-      }
+export default {
+  name: 'nav',
+  data () { // es6 写法
+    return {
+      bg: require('../../assets/whiteRetutnUp@3x.png'),
+      scrollY: 0
+    }
+  },
+  methods: {
+    back () {
+      this.$router.back()
+    }
+  },
+  props: {
+    title: {
+      type: String,
+      default: ''
     },
-    methods: {
-      back() {
-        this.$router.back()
-      }
-    },
-    props: {
-      title: {
-        type: String,
-        default: ''
-      },
-      showReturn: {
-        type: Boolean,
-        default: true
-      }
+    showReturn: {
+      type: Boolean,
+      default: true
     }
   }
+}
 </script>
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .nav {

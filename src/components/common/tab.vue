@@ -30,14 +30,15 @@
           <span class="tab-item-text">我的</span>
         </div>
       </router-link>
+
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'tab'
-  }
+export default {
+  name: 'tab'
+}
 </script>
 
 <style scoped>

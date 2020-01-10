@@ -18,8 +18,9 @@
         </div>
       </div>
     </div>
-    <router-view></router-view>
-
+    <transition name="slide">
+      <router-view></router-view>
+    </transition>
   </div>
 
 </template>
@@ -125,4 +126,12 @@ export default {
     bottom: 0;
     background-color: #F1F1F1;
   }
+  .slide-enter-active{
+    transition: all 0.3s
+  }
+
+  .slide-enter{
+    transform: translate3d(100%, 0, 0)
+  }
+
 </style>
