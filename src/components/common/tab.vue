@@ -3,31 +3,31 @@
     <div style="width: 100%;height: 1px;background-color: rgba(181,181,181,0.8)"></div>
 
     <div class="tab-box">
-      <router-link tag="div" class="tab-item" to="/">
+      <router-link tag="div" class="tab-item" to="/" @click.native="tabClick(1)" >
         <div class="tab-link">
-          <img class="tab-item-icon" src="../../assets/ic_recommend_red.png" alt="...">
-          <span class="tab-item-text tab-item-text-clicked">推荐</span>
+          <img class="tab-item-icon" src="../../assets/ic_recommend_red.png" alt="..." ref="tabicon1">
+          <span class="tab-item-text tab-item-text-clicked" ref="tabtitle1">推荐</span>
         </div>
       </router-link>
 
-      <router-link tag="div" class="tab-item" to="/shop">
+      <router-link tag="div" class="tab-item" to="/shop" @click.native="tabClick(2)">
         <div class="tab-link">
-          <img class="tab-item-icon" src="../../assets/ic_shop_grey.png" alt="...">
-          <span class="tab-item-text">福利购</span>
+          <img class="tab-item-icon"  alt="..." ref="tabicon2">
+          <span class="tab-item-text" ref="tabtitle2">福利购</span>
         </div>
       </router-link>
 
-      <router-link tag="div" class="tab-item" to="/course">
+      <router-link tag="div" class="tab-item" to="/course" @click.native="tabClick(3)" >
         <div class="tab-link">
-          <img class="tab-item-icon" src="../../assets/ic_course_grey.png" alt="...">
-          <span class="tab-item-text">教程</span>
+          <img class="tab-item-icon" src="../../assets/ic_course_grey.png" alt="..." ref="tabicon3">
+          <span class="tab-item-text" ref="tabtitle3">教程</span>
         </div>
       </router-link>
 
-      <router-link tag="div" class="tab-item" to="/person">
+      <router-link tag="div" class="tab-item" to="/person" @click.native="tabClick(4)">
         <div class="tab-link">
-          <img class="tab-item-icon" src="../../assets/ic_mine_grey.png" alt="...">
-          <span class="tab-item-text">我的</span>
+          <img class="tab-item-icon" src="../../assets/ic_mine_grey.png" alt="..."  ref="tabicon4">
+          <span class="tab-item-text" ref="tabtitle4">我的</span>
         </div>
       </router-link>
 
@@ -37,7 +37,39 @@
 
 <script>
 export default {
-  name: 'tab'
+  name: 'tab',
+  data () {
+    return {
+      icon2: require('../../assets/ic_shop_red.png')
+    }
+  },
+  methods: {
+    tabClick (e) {
+      this.changeTab()
+      if (e === 1) {
+        this.$refs.tabtitle1.style.color = 'red'
+        this.$refs.tabicon1 = require('../../assets/ic_recommend_red.png')
+      }
+      if (e === 2) {
+        this.$refs.tabtitle2.style.color = 'red'
+        this.$refs.tabicon2 = this.icon2
+      }
+      if (e === 3) {
+        this.$refs.tabtitle3.style.color = 'red'
+        this.$refs.tabicon3 = require('../../assets/ic_course_red.png')
+      }
+      if (e === 4) {
+        this.$refs.tabtitle4.style.color = 'red'
+        this.$refs.tabicon4 = require('../../assets/ic_mine_grey.png')
+      }
+    },
+    changeTab () {
+      this.$refs.tabtitle2.style.color = '#BCBCBC'
+      this.$refs.tabtitle1.style.color = '#BCBCBC'
+      this.$refs.tabtitle3.style.color = '#BCBCBC'
+      this.$refs.tabtitle4.style.color = '#BCBCBC'
+    }
+  }
 }
 </script>
 
@@ -81,6 +113,6 @@ export default {
   }
 
   .tab-item-text-clicked {
-    color: #fc2b27 !important;
+    color: #fc2b27 ;
   }
 </style>
