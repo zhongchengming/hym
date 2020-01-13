@@ -26,54 +26,54 @@
 </template>
 
 <script>
-import {getMessageList} from '../../js/recommend'
-import Nav from '../common/nav'
+  import {getMessageList} from '../../js/recommend'
+  import Nav from '../common/nav'
 
-export default {
-  name: 'recommend',
-  data () {
-    return {
-      messageList: [],
-      isShowReturn: false,
-    }
-  },
-  created () { //  初始化的时候执行
-    this.getMessageList()
-  },
-  mounted: function () {
-
-  },
-  methods: {
-    getMessageList () {
-      // getMessageList().then((res) => {
-      //   if (res.resultCode === 1) {
-      //     this.messageList = res.resultBody
-      //   }
-      // })
-      this.messageList = [{
-        'title': '最强【推荐】火爆全网，最新资讯等你来获取。',
-        'sendtime': '2018-09-12',
-        'img': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999-10000&sec=1578984141&di=dc8f83158d570f41e6ce4764e5c6936b&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201411%2F20%2F20141120094948-BrytG.jpeg'
-      }, {
-        'title': '最强【推荐】火爆全网，最新资讯等你来获取。',
-        'sendtime': '2018-09-12',
-        'img': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999-10000&sec=1578984141&di=dc8f83158d570f41e6ce4764e5c6936b&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201411%2F20%2F20141120094948-BrytG.jpeg'
-      }, {
-        'title': '最强【推荐】火爆全网，最新资讯等你来获取。',
-        'sendtime': '2018-09-12',
-        'img': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999-10000&sec=1578984141&di=dc8f83158d570f41e6ce4764e5c6936b&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201411%2F20%2F20141120094948-BrytG.jpeg'
-      }]
+  export default {
+    name: 'recommend',
+    data() {
+      return {
+        messageList: [],
+        isShowReturn: false,
+      }
     },
-    pushDetail () {
-      this.$router.push({
-        path: `/recommend/detail/`
-      })
+    created() { //  初始化的时候执行
+      this.getMessageList()
+    },
+    mounted: function () {
+
+    },
+    methods: {
+      getMessageList() {
+        // getMessageList().then((res) => {
+        //   if (res.resultCode === 1) {
+        //     this.messageList = res.resultBody
+        //   }
+        // })
+        this.messageList = [{
+          'title': '最强【推荐】火爆全网，最新资讯等你来获取。',
+          'sendtime': '2018-09-12',
+          'img': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999-10000&sec=1578984141&di=dc8f83158d570f41e6ce4764e5c6936b&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201411%2F20%2F20141120094948-BrytG.jpeg'
+        }, {
+          'title': '最强【推荐】火爆全网，最新资讯等你来获取。',
+          'sendtime': '2018-09-12',
+          'img': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999-10000&sec=1578984141&di=dc8f83158d570f41e6ce4764e5c6936b&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201411%2F20%2F20141120094948-BrytG.jpeg'
+        }, {
+          'title': '最强【推荐】火爆全网，最新资讯等你来获取。',
+          'sendtime': '2018-09-12',
+          'img': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999-10000&sec=1578984141&di=dc8f83158d570f41e6ce4764e5c6936b&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201411%2F20%2F20141120094948-BrytG.jpeg'
+        }]
+      },
+      pushDetail() {
+        this.$router.push({
+          path: `/recommend/detail/`
+        })
+      }
+    },
+    components: {
+      Nav
     }
-  },
-  components: {
-    Nav
   }
-}
 </script>
 
 <style scoped>
@@ -126,11 +126,12 @@ export default {
     bottom: 0;
     background-color: #F1F1F1;
   }
-  .slide-enter-active{
+
+  .slide-enter-active {
     transition: all 0.3s
   }
 
-  .slide-enter{
+  .slide-enter {
     transform: translate3d(100%, 0, 0)
   }
 
