@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import shop from '@/components/shop/shop'
+import course from '@/components/course/course'
 import person from '@/components/person/person'
 import recommend from '@/components/recommend/recommend'
 import messageDetail from '@/components/recommend/messageDetail'
@@ -30,6 +31,10 @@ export default new Router({
     {
       path: '/shop',
       component: shop
+    },
+    {
+      path: '/course',
+      component: course
     }
   ]
 })

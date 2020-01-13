@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Nav title="优惠券" :show-return="false"/>
+    <Nav title="学习" :show-return="false"/>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
   import Nav from '../common/nav'
 
   export default {
-    name: 'shop',
+    name: 'course',
     components: {
       Nav
     }
